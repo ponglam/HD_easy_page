@@ -1,0 +1,20 @@
+{
+  "id": "soft-editorial",
+  "name": "Soft Editorial / Beauty",
+  "version": "0.1.0",
+  "schemaVersion": "0.1",
+  "status": "ready",
+  "description": "Warm ivory, muted sage, expressive serif typography, generous whitespace and asymmetrical editorial rhythm.",
+  "supportedIntents": [
+    "cover",
+    "intro",
+    "story",
+    "product",
+    "feature",
+    "information",
+    "team",
+    "gallery",
+    "closing"
+  ],
+  "sampleDocument": "samples/nara-skin.json"
+}

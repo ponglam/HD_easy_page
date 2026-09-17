@@ -1,0 +1,448 @@
+{
+  "$ref": "#/definitions/document",
+  "definitions": {
+    "document": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "type": "string",
+          "const": "0.1"
+        },
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "stylePackId": {
+          "type": "string"
+        },
+        "stylePackVersion": {
+          "type": "string",
+          "const": "0.1.0"
+        },
+        "page": {
+          "type": "object",
+          "properties": {
+            "width": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "maximum": 10000
+            },
+            "height": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "maximum": 10000
+            },
+            "binding": {
+              "type": "string",
+              "enum": [
+                "digital",
+                "saddle-stitch",
+                "perfect"
+              ]
+            }
+          },
+          "required": [
+            "width",
+            "height",
+            "binding"
+          ],
+          "additionalProperties": false
+        },
+        "units": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "single",
+                  "spread"
+                ]
+              },
+              "intent": {
+                "type": "string"
+              },
+              "layoutId": {
+                "type": "string"
+              },
+              "variantId": {
+                "type": "string"
+              },
+              "slots": {
+                "type": "object",
+                "additionalProperties": {
+                  "anyOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "const": "text"
+                        },
+                        "text": {
+                          "type": "string"
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {
+                            "anyOf": [
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "type": {
+                                    "type": "string",
+                                    "const": "opacity"
+                                  },
+                                  "value": {
+                                    "type": "number",
+                                    "minimum": 0,
+                                    "maximum": 1
+                                  }
+                                },
+                                "required": [
+                                  "type",
+                                  "value"
+                                ],
+                                "additionalProperties": false
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "type": {
+                                    "type": "string",
+                                    "const": "blend"
+                                  },
+                                  "mode": {
+                                    "type": "string",
+                                    "enum": [
+                                      "normal",
+                                      "multiply",
+                                      "screen",
+                                      "overlay",
+                                      "soft-light"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "type",
+                                  "mode"
+                                ],
+                                "additionalProperties": false
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "type": {
+                                    "type": "string",
+                                    "const": "blur"
+                                  },
+                                  "radius": {
+                                    "type": "number",
+                                    "minimum": 0,
+                                    "maximum": 40
+                                  }
+                                },
+                                "required": [
+                                  "type",
+                                  "radius"
+                                ],
+                                "additionalProperties": false
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "type": {
+                                    "type": "string",
+                                    "const": "shadow"
+                                  },
+                                  "dx": {
+                                    "type": "number",
+                                    "minimum": -100,
+                                    "maximum": 100
+                                  },
+                                  "dy": {
+                                    "type": "number",
+                                    "minimum": -100,
+                                    "maximum": 100
+                                  },
+                                  "blur": {
+                                    "type": "number",
+                                    "minimum": 0,
+                                    "maximum": 60
+                                  },
+                                  "color": {
+                                    "type": "string",
+                                    "pattern": "^#[0-9a-fA-F]{6}$"
+                                  },
+                                  "opacity": {
+                                    "$ref": "#/definitions/document/properties/units/items/properties/slots/additionalProperties/anyOf/0/properties/effects/items/anyOf/0/properties/value"
+                                  }
+                                },
+                                "required": [
+                                  "type",
+                                  "dx",
+                                  "dy",
+                                  "blur",
+                                  "color",
+                                  "opacity"
+                                ],
+                                "additionalProperties": false
+                              },
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "type": {
+                                    "type": "string",
+                                    "const": "tint"
+                                  },
+                                  "color": {
+                                    "$ref": "#/definitions/document/properties/units/items/properties/slots/additionalProperties/anyOf/0/properties/effects/items/anyOf/3/properties/color"
+                                  },
+                                  "amount": {
+                                    "$ref": "#/definitions/document/properties/units/items/properties/slots/additionalProperties/anyOf/0/properties/effects/items/anyOf/0/properties/value"
+                                  }
+                                },
+                                "required": [
+                                  "type",
+                                  "color",
+                                  "amount"
+                                ],
+                                "additionalProperties": false
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "required": [
+                        "type",
+                        "text",
+                        "effects"
+                      ],
+                      "additionalProperties": false
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "const": "image"
+                        },
+                        "assetId": {
+                          "type": "string"
+                        },
+                        "operations": {
+                          "type": "object",
+                          "properties": {
+                            "fit": {
+                              "type": "string",
+                              "enum": [
+                                "cover",
+                                "contain"
+                              ]
+                            },
+                            "focal": {
+                              "type": "object",
+                              "properties": {
+                                "x": {
+                                  "$ref": "#/definitions/document/properties/units/items/properties/slots/additionalProperties/anyOf/0/properties/effects/items/anyOf/0/properties/value"
+                                },
+                                "y": {
+                                  "$ref": "#/definitions/document/properties/units/items/properties/slots/additionalProperties/anyOf/0/properties/effects/items/anyOf/0/properties/value"
+                                }
+                              },
+                              "required": [
+                                "x",
+                                "y"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "crop": {
+                              "type": "object",
+                              "properties": {
+                                "x": {
+                                  "$ref": "#/definitions/document/properties/units/items/properties/slots/additionalProperties/anyOf/0/properties/effects/items/anyOf/0/properties/value"
+                                },
+                                "y": {
+                                  "$ref": "#/definitions/document/properties/units/items/properties/slots/additionalProperties/anyOf/0/properties/effects/items/anyOf/0/properties/value"
+                                },
+                                "width": {
+                                  "type": "number",
+                                  "exclusiveMinimum": 0,
+                                  "maximum": 1
+                                },
+                                "height": {
+                                  "type": "number",
+                                  "exclusiveMinimum": 0,
+                                  "maximum": 1
+                                }
+                              },
+                              "required": [
+                                "x",
+                                "y",
+                                "width",
+                                "height"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "backgroundRemove": {
+                              "type": "object",
+                              "properties": {
+                                "mode": {
+                                  "type": "string",
+                                  "enum": [
+                                    "none",
+                                    "ai",
+                                    "color-key"
+                                  ]
+                                },
+                                "status": {
+                                  "type": "string",
+                                  "enum": [
+                                    "idle",
+                                    "pending",
+                                    "ready",
+                                    "failed"
+                                  ]
+                                },
+                                "color": {
+                                  "$ref": "#/definitions/document/properties/units/items/properties/slots/additionalProperties/anyOf/0/properties/effects/items/anyOf/3/properties/color"
+                                },
+                                "threshold": {
+                                  "$ref": "#/definitions/document/properties/units/items/properties/slots/additionalProperties/anyOf/0/properties/effects/items/anyOf/0/properties/value"
+                                },
+                                "feather": {
+                                  "type": "number",
+                                  "minimum": 0
+                                },
+                                "resultAssetId": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "mode",
+                                "status"
+                              ],
+                              "additionalProperties": false
+                            }
+                          },
+                          "required": [
+                            "fit",
+                            "focal",
+                            "crop",
+                            "backgroundRemove"
+                          ],
+                          "additionalProperties": false
+                        },
+                        "effects": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/definitions/document/properties/units/items/properties/slots/additionalProperties/anyOf/0/properties/effects/items"
+                          }
+                        }
+                      },
+                      "required": [
+                        "type",
+                        "assetId",
+                        "operations",
+                        "effects"
+                      ],
+                      "additionalProperties": false
+                    }
+                  ]
+                }
+              }
+            },
+            "required": [
+              "id",
+              "label",
+              "kind",
+              "intent",
+              "layoutId",
+              "variantId",
+              "slots"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1,
+          "maxItems": 200
+        },
+        "assets": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              },
+              "alt": {
+                "type": "string"
+              },
+              "src": {
+                "type": "string"
+              },
+              "width": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "height": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "generated",
+                  "placeholder",
+                  "uploaded",
+                  "external"
+                ]
+              },
+              "credit": {
+                "type": "string"
+              },
+              "artDirection": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "label",
+              "alt",
+              "src",
+              "width",
+              "height",
+              "kind",
+              "credit",
+              "artDirection"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "id",
+        "title",
+        "stylePackId",
+        "stylePackVersion",
+        "page",
+        "units",
+        "assets"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

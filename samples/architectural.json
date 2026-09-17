@@ -1,0 +1,813 @@
+{
+  "schemaVersion": "0.1",
+  "id": "architectural-sample",
+  "title": "FORM Atelier — Selected Works",
+  "stylePackId": "architectural",
+  "stylePackVersion": "0.1.0",
+  "page": {
+    "width": 1188,
+    "height": 840,
+    "binding": "digital"
+  },
+  "units": [
+    {
+      "id": "unit-01",
+      "label": "作品集封面",
+      "kind": "single",
+      "intent": "cover",
+      "layoutId": "cover",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "FORM ATELIER / Selected works",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "Spaces for everyday life.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "A fictional collection of spaces shaped by light, proportion and the rituals of daily life. Architecture that gives ordinary moments room to unfold.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "ILLUSTRATIVE SAMPLE / Replace with your own work.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "study-1",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-02",
+      "label": "事務所理念",
+      "kind": "single",
+      "intent": "intro",
+      "layoutId": "intro",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "01 / Practice",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "Begin with the place.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "We study the character of a site before drawing a line. Climate, movement and memory become the foundation for spaces that feel grounded and generous.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "ILLUSTRATIVE SAMPLE / Replace with your own work.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "study-2",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-03",
+      "label": "設計敘事",
+      "kind": "single",
+      "intent": "story",
+      "layoutId": "story",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "02 / Approach",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "A quiet conversation.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "Every project grows through dialogue with its surroundings. We balance clear geometry with tactile materials, allowing light and time to complete the composition.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "ILLUSTRATIVE SAMPLE / Replace with your own work.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "study-3",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-04",
+      "label": "住宅案例",
+      "kind": "single",
+      "intent": "product",
+      "layoutId": "product",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "03 / Residential",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "The Courtyard House.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "A fictional home organised around an open courtyard. Living spaces face a sheltered garden, while deep openings temper the afternoon sun and frame changing views.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "ILLUSTRATIVE SAMPLE / Replace with your own work.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "study-1",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-05",
+      "label": "材質研究",
+      "kind": "single",
+      "intent": "feature",
+      "layoutId": "feature",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "04 / Materials",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "Texture holds the light.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "Pale concrete, warm timber and brushed metal form a restrained palette. Each surface is chosen for how it ages, how it meets the hand and how it receives daylight.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "ILLUSTRATIVE SAMPLE / Replace with your own work.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "study-2",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-06",
+      "label": "基地與平面",
+      "kind": "single",
+      "intent": "information",
+      "layoutId": "information",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "05 / Site & plan",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "A place to gather.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "Illustrative project: a 240 square metre house on a compact urban site. A central courtyard links shared rooms; a quieter edge accommodates private spaces.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "ILLUSTRATIVE SAMPLE / Replace with your own work.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "study-3",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-07",
+      "label": "設計團隊",
+      "kind": "single",
+      "intent": "team",
+      "layoutId": "team",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "06 / People",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "Many perspectives. One practice.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "Architects, designers and makers work together from early studies to on-site decisions. Our practice values careful listening and the exchange of ideas.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "ILLUSTRATIVE SAMPLE / Replace with your own work.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "portrait-1",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        },
+        "secondary": {
+          "type": "image",
+          "assetId": "portrait-2",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-08",
+      "label": "空間影像",
+      "kind": "single",
+      "intent": "gallery",
+      "layoutId": "gallery",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "07 / Spatial studies",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "Between inside and out.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "A sequence of thresholds connects the interior with the landscape. Sheltered terraces and framed openings extend daily life beyond the edge of the building.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "ILLUSTRATIVE SAMPLE / Replace with your own work.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "study-2",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        },
+        "secondary": {
+          "type": "image",
+          "assetId": "study-3",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-09",
+      "label": "聯絡與結語",
+      "kind": "single",
+      "intent": "closing",
+      "layoutId": "closing",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "08 / Contact",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "Let us shape a place.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "We welcome conversations about new homes, shared spaces and thoughtful renewal. Start with a place, a question or an ambition. Fictional studio demonstration.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "ILLUSTRATIVE SAMPLE / Replace with your own work.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "study-3",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-10",
+      "label": "設計敘事 · 跨頁",
+      "kind": "spread",
+      "intent": "story",
+      "layoutId": "story-spread",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "02 / Approach",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "A quiet conversation.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "Every project grows through dialogue with its surroundings. We balance clear geometry with tactile materials, allowing light and time to complete the composition.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "ILLUSTRATIVE SAMPLE / Replace with your own work.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "study-1",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-11",
+      "label": "住宅案例 · 跨頁",
+      "kind": "spread",
+      "intent": "product",
+      "layoutId": "product-spread",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "03 / Residential",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "The Courtyard House.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "A fictional home organised around an open courtyard. Living spaces face a sheltered garden, while deep openings temper the afternoon sun and frame changing views.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "ILLUSTRATIVE SAMPLE / Replace with your own work.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "study-2",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-12",
+      "label": "基地與平面 · 跨頁",
+      "kind": "spread",
+      "intent": "information",
+      "layoutId": "information-spread",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "05 / Site & plan",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "A place to gather.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "Illustrative project: a 240 square metre house on a compact urban site. A central courtyard links shared rooms; a quieter edge accommodates private spaces.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "ILLUSTRATIVE SAMPLE / Replace with your own work.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "study-3",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-13",
+      "label": "空間影像 · 跨頁",
+      "kind": "spread",
+      "intent": "gallery",
+      "layoutId": "gallery-spread",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "07 / Spatial studies",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "Between inside and out.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "A sequence of thresholds connects the interior with the landscape. Sheltered terraces and framed openings extend daily life beyond the edge of the building.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "ILLUSTRATIVE SAMPLE / Replace with your own work.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "study-1",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        },
+        "secondary": {
+          "type": "image",
+          "assetId": "study-2",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    }
+  ],
+  "assets": {
+    "study-1": {
+      "id": "study-1",
+      "label": "Architecture study 1",
+      "alt": "Conceptual courtyard architecture illustration",
+      "src": "/assets/architecture-study-1.svg",
+      "width": 1200,
+      "height": 800,
+      "kind": "placeholder",
+      "credit": "EasyPage original vector sample; fictional demonstration",
+      "artDirection": "Replace with a real project image or report graphic."
+    },
+    "study-2": {
+      "id": "study-2",
+      "label": "Architecture study 2",
+      "alt": "Conceptual courtyard architecture illustration",
+      "src": "/assets/architecture-study-2.svg",
+      "width": 1200,
+      "height": 800,
+      "kind": "placeholder",
+      "credit": "EasyPage original vector sample; fictional demonstration",
+      "artDirection": "Replace with a real project image or report graphic."
+    },
+    "study-3": {
+      "id": "study-3",
+      "label": "Architecture study 3",
+      "alt": "Conceptual courtyard architecture illustration",
+      "src": "/assets/architecture-study-3.svg",
+      "width": 1200,
+      "height": 800,
+      "kind": "placeholder",
+      "credit": "EasyPage original vector sample; fictional demonstration",
+      "artDirection": "Replace with a real project image or report graphic."
+    },
+    "portrait-1": {
+      "id": "portrait-1",
+      "label": "Team member 1",
+      "alt": "Individual portrait placeholder 1",
+      "src": "/assets/portrait-1.svg",
+      "width": 800,
+      "height": 1000,
+      "kind": "placeholder",
+      "credit": "EasyPage original vector placeholder",
+      "artDirection": "Replace with one individual portrait."
+    },
+    "portrait-2": {
+      "id": "portrait-2",
+      "label": "Team member 2",
+      "alt": "Individual portrait placeholder 2",
+      "src": "/assets/portrait-2.svg",
+      "width": 800,
+      "height": 1000,
+      "kind": "placeholder",
+      "credit": "EasyPage original vector placeholder",
+      "artDirection": "Replace with one individual portrait."
+    }
+  }
+}

@@ -1,0 +1,2299 @@
+{
+  "manifest": {
+    "id": "soft-editorial",
+    "name": "Soft Editorial / Beauty",
+    "version": "0.1.0",
+    "schemaVersion": "0.1",
+    "status": "ready",
+    "description": "Warm ivory, muted sage, expressive serif typography, generous whitespace and asymmetrical editorial rhythm.",
+    "supportedIntents": [
+      "cover",
+      "intro",
+      "story",
+      "product",
+      "feature",
+      "information",
+      "team",
+      "gallery",
+      "closing"
+    ],
+    "sampleDocument": "samples/nara-skin.json",
+    "catalog": false
+  },
+  "tokens": {
+    "colors": {
+      "paper": "#F4F0E8",
+      "ink": "#373C32",
+      "muted": "#7B7E70",
+      "accent": "#7B896E",
+      "line": "#D2CEC2"
+    },
+    "typography": {
+      "eyebrow": {
+        "family": "Arial, sans-serif",
+        "size": 19,
+        "minSize": 16,
+        "leading": 1.4,
+        "tracking": 3,
+        "color": "muted",
+        "italic": false
+      },
+      "title": {
+        "family": "Georgia, serif",
+        "size": 100,
+        "minSize": 48,
+        "leading": 1.04,
+        "tracking": 0,
+        "color": "ink",
+        "italic": false
+      },
+      "body": {
+        "family": "Arial, sans-serif",
+        "size": 27,
+        "minSize": 21,
+        "leading": 1.55,
+        "tracking": 0,
+        "color": "ink",
+        "italic": false
+      },
+      "caption": {
+        "family": "Arial, sans-serif",
+        "size": 18,
+        "minSize": 15,
+        "leading": 1.5,
+        "tracking": 0,
+        "color": "muted",
+        "italic": false
+      },
+      "quote": {
+        "family": "Georgia, serif",
+        "size": 47,
+        "minSize": 28,
+        "leading": 1.2,
+        "tracking": 0,
+        "color": "accent",
+        "italic": true
+      }
+    }
+  },
+  "layouts": [
+    {
+      "id": "cover",
+      "label": "品牌氛圍開場",
+      "intent": "cover",
+      "kind": "single",
+      "description": "品牌氛圍開場：以內容目的選擇版型；保留文字與圖片再切換構圖。",
+      "slots": [
+        {
+          "id": "eyebrow",
+          "label": "章節標記",
+          "semantic": "eyebrow",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "eyebrow",
+          "defaultEffects": []
+        },
+        {
+          "id": "title",
+          "label": "主標題",
+          "semantic": "title",
+          "type": "text",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "title",
+          "defaultEffects": []
+        },
+        {
+          "id": "body",
+          "label": "內文",
+          "semantic": "body",
+          "type": "text",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "body",
+          "defaultEffects": []
+        },
+        {
+          "id": "hero",
+          "label": "主視覺",
+          "semantic": "hero",
+          "type": "image",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "image",
+          "defaultEffects": []
+        },
+        {
+          "id": "caption",
+          "label": "圖片說明",
+          "semantic": "caption",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "caption",
+          "defaultEffects": []
+        },
+        {
+          "id": "quote",
+          "label": "引言",
+          "semantic": "quote",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "quote",
+          "defaultEffects": []
+        },
+        {
+          "id": "secondary",
+          "label": "第二張圖片",
+          "semantic": "secondary",
+          "type": "image",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "image",
+          "defaultEffects": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "editorial",
+          "label": "Editorial / 編輯敘事",
+          "regions": [
+            {
+              "id": "narrative",
+              "frame": {
+                "x": 0.065,
+                "y": 0.16,
+                "width": 0.45,
+                "height": 0.7
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "eyebrow",
+                "title",
+                "body",
+                "quote"
+              ],
+              "weights": {
+                "eyebrow": 0.4,
+                "title": 3,
+                "body": 2,
+                "quote": 1.3
+              }
+            },
+            {
+              "id": "visual",
+              "frame": {
+                "x": 0.57,
+                "y": 0,
+                "width": 0.43,
+                "height": 0.94
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "hero",
+                "secondary"
+              ],
+              "weights": {
+                "hero": 4,
+                "secondary": 2
+              }
+            },
+            {
+              "id": "caption",
+              "frame": {
+                "x": 0.065,
+                "y": 0.89,
+                "width": 0.44,
+                "height": 0.055
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "caption"
+              ],
+              "weights": {
+                "caption": 0.5
+              }
+            }
+          ]
+        },
+        {
+          "id": "reverse",
+          "label": "Image first / 影像優先",
+          "regions": [
+            {
+              "id": "visual",
+              "frame": {
+                "x": 0.055,
+                "y": 0.08,
+                "width": 0.41,
+                "height": 0.78
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "hero",
+                "secondary"
+              ],
+              "weights": {
+                "hero": 4,
+                "secondary": 2
+              }
+            },
+            {
+              "id": "narrative",
+              "frame": {
+                "x": 0.55,
+                "y": 0.16,
+                "width": 0.38,
+                "height": 0.65
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "eyebrow",
+                "title",
+                "body",
+                "quote"
+              ],
+              "weights": {
+                "eyebrow": 0.4,
+                "title": 3,
+                "body": 2,
+                "quote": 1.3
+              }
+            },
+            {
+              "id": "caption",
+              "frame": {
+                "x": 0.055,
+                "y": 0.88,
+                "width": 0.4,
+                "height": 0.055
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "caption"
+              ],
+              "weights": {
+                "caption": 0.5
+              }
+            }
+          ]
+        }
+      ],
+      "gutter": {
+        "width": 0,
+        "textSafety": 60,
+        "imageSafety": 40,
+        "allowImageCrossing": false
+      }
+    },
+    {
+      "id": "intro",
+      "label": "核心理念",
+      "intent": "intro",
+      "kind": "spread",
+      "description": "核心理念：以內容目的選擇版型；保留文字與圖片再切換構圖。",
+      "slots": [
+        {
+          "id": "eyebrow",
+          "label": "章節標記",
+          "semantic": "eyebrow",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "eyebrow",
+          "defaultEffects": []
+        },
+        {
+          "id": "title",
+          "label": "主標題",
+          "semantic": "title",
+          "type": "text",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "title",
+          "defaultEffects": []
+        },
+        {
+          "id": "body",
+          "label": "內文",
+          "semantic": "body",
+          "type": "text",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "body",
+          "defaultEffects": []
+        },
+        {
+          "id": "hero",
+          "label": "主視覺",
+          "semantic": "hero",
+          "type": "image",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "image",
+          "defaultEffects": []
+        },
+        {
+          "id": "caption",
+          "label": "圖片說明",
+          "semantic": "caption",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "caption",
+          "defaultEffects": []
+        },
+        {
+          "id": "quote",
+          "label": "引言",
+          "semantic": "quote",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "quote",
+          "defaultEffects": []
+        },
+        {
+          "id": "secondary",
+          "label": "第二張圖片",
+          "semantic": "secondary",
+          "type": "image",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "image",
+          "defaultEffects": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "editorial",
+          "label": "Editorial / 編輯敘事",
+          "regions": [
+            {
+              "id": "narrative",
+              "frame": {
+                "x": 0.065,
+                "y": 0.16,
+                "width": 0.36,
+                "height": 0.65
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "left",
+              "gutterSafe": true,
+              "slots": [
+                "eyebrow",
+                "title",
+                "body",
+                "quote"
+              ],
+              "weights": {
+                "eyebrow": 0.4,
+                "title": 3,
+                "body": 2,
+                "quote": 1.3
+              }
+            },
+            {
+              "id": "visual",
+              "frame": {
+                "x": 0.53,
+                "y": 0.08,
+                "width": 0.41,
+                "height": 0.78
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "right",
+              "gutterSafe": true,
+              "slots": [
+                "hero",
+                "secondary"
+              ],
+              "weights": {
+                "hero": 4,
+                "secondary": 2
+              }
+            },
+            {
+              "id": "caption",
+              "frame": {
+                "x": 0.53,
+                "y": 0.88,
+                "width": 0.4,
+                "height": 0.055
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "right",
+              "gutterSafe": true,
+              "slots": [
+                "caption"
+              ],
+              "weights": {
+                "caption": 0.5
+              }
+            }
+          ]
+        },
+        {
+          "id": "reverse",
+          "label": "Image first / 影像優先",
+          "regions": [
+            {
+              "id": "visual",
+              "frame": {
+                "x": 0.055,
+                "y": 0.08,
+                "width": 0.41,
+                "height": 0.78
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "left",
+              "gutterSafe": true,
+              "slots": [
+                "hero",
+                "secondary"
+              ],
+              "weights": {
+                "hero": 4,
+                "secondary": 2
+              }
+            },
+            {
+              "id": "narrative",
+              "frame": {
+                "x": 0.55,
+                "y": 0.16,
+                "width": 0.38,
+                "height": 0.65
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "right",
+              "gutterSafe": true,
+              "slots": [
+                "eyebrow",
+                "title",
+                "body",
+                "quote"
+              ],
+              "weights": {
+                "eyebrow": 0.4,
+                "title": 3,
+                "body": 2,
+                "quote": 1.3
+              }
+            },
+            {
+              "id": "caption",
+              "frame": {
+                "x": 0.055,
+                "y": 0.88,
+                "width": 0.4,
+                "height": 0.055
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "left",
+              "gutterSafe": true,
+              "slots": [
+                "caption"
+              ],
+              "weights": {
+                "caption": 0.5
+              }
+            }
+          ]
+        }
+      ],
+      "gutter": {
+        "width": 0,
+        "textSafety": 60,
+        "imageSafety": 40,
+        "allowImageCrossing": false
+      }
+    },
+    {
+      "id": "story",
+      "label": "品牌故事",
+      "intent": "story",
+      "kind": "spread",
+      "description": "品牌故事：以內容目的選擇版型；保留文字與圖片再切換構圖。",
+      "slots": [
+        {
+          "id": "eyebrow",
+          "label": "章節標記",
+          "semantic": "eyebrow",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "eyebrow",
+          "defaultEffects": []
+        },
+        {
+          "id": "title",
+          "label": "主標題",
+          "semantic": "title",
+          "type": "text",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "title",
+          "defaultEffects": []
+        },
+        {
+          "id": "body",
+          "label": "內文",
+          "semantic": "body",
+          "type": "text",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "body",
+          "defaultEffects": []
+        },
+        {
+          "id": "hero",
+          "label": "主視覺",
+          "semantic": "hero",
+          "type": "image",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "image",
+          "defaultEffects": []
+        },
+        {
+          "id": "caption",
+          "label": "圖片說明",
+          "semantic": "caption",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "caption",
+          "defaultEffects": []
+        },
+        {
+          "id": "quote",
+          "label": "引言",
+          "semantic": "quote",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "quote",
+          "defaultEffects": []
+        },
+        {
+          "id": "secondary",
+          "label": "第二張圖片",
+          "semantic": "secondary",
+          "type": "image",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "image",
+          "defaultEffects": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "editorial",
+          "label": "Editorial / 編輯敘事",
+          "regions": [
+            {
+              "id": "narrative",
+              "frame": {
+                "x": 0.055,
+                "y": 0.12,
+                "width": 0.38,
+                "height": 0.75
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "left",
+              "gutterSafe": true,
+              "slots": [
+                "eyebrow",
+                "title",
+                "body",
+                "quote"
+              ],
+              "weights": {
+                "eyebrow": 0.4,
+                "title": 3,
+                "body": 2,
+                "quote": 1.3
+              }
+            },
+            {
+              "id": "visual",
+              "frame": {
+                "x": 0.55,
+                "y": 0.05,
+                "width": 0.4,
+                "height": 0.8
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "right",
+              "gutterSafe": true,
+              "slots": [
+                "hero",
+                "secondary"
+              ],
+              "weights": {
+                "hero": 4,
+                "secondary": 2
+              }
+            },
+            {
+              "id": "caption",
+              "frame": {
+                "x": 0.55,
+                "y": 0.88,
+                "width": 0.4,
+                "height": 0.055
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "right",
+              "gutterSafe": true,
+              "slots": [
+                "caption"
+              ],
+              "weights": {
+                "caption": 0.5
+              }
+            }
+          ]
+        },
+        {
+          "id": "reverse",
+          "label": "Image first / 影像優先",
+          "regions": [
+            {
+              "id": "visual",
+              "frame": {
+                "x": 0.055,
+                "y": 0.08,
+                "width": 0.41,
+                "height": 0.78
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "left",
+              "gutterSafe": true,
+              "slots": [
+                "hero",
+                "secondary"
+              ],
+              "weights": {
+                "hero": 4,
+                "secondary": 2
+              }
+            },
+            {
+              "id": "narrative",
+              "frame": {
+                "x": 0.55,
+                "y": 0.16,
+                "width": 0.38,
+                "height": 0.65
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "right",
+              "gutterSafe": true,
+              "slots": [
+                "eyebrow",
+                "title",
+                "body",
+                "quote"
+              ],
+              "weights": {
+                "eyebrow": 0.4,
+                "title": 3,
+                "body": 2,
+                "quote": 1.3
+              }
+            },
+            {
+              "id": "caption",
+              "frame": {
+                "x": 0.055,
+                "y": 0.88,
+                "width": 0.4,
+                "height": 0.055
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "left",
+              "gutterSafe": true,
+              "slots": [
+                "caption"
+              ],
+              "weights": {
+                "caption": 0.5
+              }
+            }
+          ]
+        }
+      ],
+      "gutter": {
+        "width": 0,
+        "textSafety": 60,
+        "imageSafety": 40,
+        "allowImageCrossing": false
+      }
+    },
+    {
+      "id": "product",
+      "label": "主打產品",
+      "intent": "product",
+      "kind": "single",
+      "description": "主打產品：以內容目的選擇版型；保留文字與圖片再切換構圖。",
+      "slots": [
+        {
+          "id": "eyebrow",
+          "label": "章節標記",
+          "semantic": "eyebrow",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "eyebrow",
+          "defaultEffects": []
+        },
+        {
+          "id": "title",
+          "label": "主標題",
+          "semantic": "title",
+          "type": "text",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "title",
+          "defaultEffects": []
+        },
+        {
+          "id": "body",
+          "label": "內文",
+          "semantic": "body",
+          "type": "text",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "body",
+          "defaultEffects": []
+        },
+        {
+          "id": "hero",
+          "label": "主視覺",
+          "semantic": "hero",
+          "type": "image",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "image",
+          "defaultEffects": []
+        },
+        {
+          "id": "caption",
+          "label": "圖片說明",
+          "semantic": "caption",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "caption",
+          "defaultEffects": []
+        },
+        {
+          "id": "quote",
+          "label": "引言",
+          "semantic": "quote",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "quote",
+          "defaultEffects": []
+        },
+        {
+          "id": "secondary",
+          "label": "第二張圖片",
+          "semantic": "secondary",
+          "type": "image",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "image",
+          "defaultEffects": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "editorial",
+          "label": "Editorial / 編輯敘事",
+          "regions": [
+            {
+              "id": "narrative",
+              "frame": {
+                "x": 0.065,
+                "y": 0.16,
+                "width": 0.36,
+                "height": 0.65
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "eyebrow",
+                "title",
+                "body",
+                "quote"
+              ],
+              "weights": {
+                "eyebrow": 0.4,
+                "title": 3,
+                "body": 2,
+                "quote": 1.3
+              }
+            },
+            {
+              "id": "visual",
+              "frame": {
+                "x": 0.53,
+                "y": 0.08,
+                "width": 0.41,
+                "height": 0.78
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "hero",
+                "secondary"
+              ],
+              "weights": {
+                "hero": 4,
+                "secondary": 2
+              }
+            },
+            {
+              "id": "caption",
+              "frame": {
+                "x": 0.53,
+                "y": 0.88,
+                "width": 0.4,
+                "height": 0.055
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "caption"
+              ],
+              "weights": {
+                "caption": 0.5
+              }
+            }
+          ]
+        },
+        {
+          "id": "reverse",
+          "label": "Image first / 影像優先",
+          "regions": [
+            {
+              "id": "visual",
+              "frame": {
+                "x": 0.055,
+                "y": 0.08,
+                "width": 0.41,
+                "height": 0.78
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "hero",
+                "secondary"
+              ],
+              "weights": {
+                "hero": 4,
+                "secondary": 2
+              }
+            },
+            {
+              "id": "narrative",
+              "frame": {
+                "x": 0.55,
+                "y": 0.16,
+                "width": 0.38,
+                "height": 0.65
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "eyebrow",
+                "title",
+                "body",
+                "quote"
+              ],
+              "weights": {
+                "eyebrow": 0.4,
+                "title": 3,
+                "body": 2,
+                "quote": 1.3
+              }
+            },
+            {
+              "id": "caption",
+              "frame": {
+                "x": 0.055,
+                "y": 0.88,
+                "width": 0.4,
+                "height": 0.055
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "caption"
+              ],
+              "weights": {
+                "caption": 0.5
+              }
+            }
+          ]
+        }
+      ],
+      "gutter": {
+        "width": 0,
+        "textSafety": 60,
+        "imageSafety": 40,
+        "allowImageCrossing": false
+      }
+    },
+    {
+      "id": "feature",
+      "label": "成分亮點",
+      "intent": "feature",
+      "kind": "spread",
+      "description": "成分亮點：以內容目的選擇版型；保留文字與圖片再切換構圖。",
+      "slots": [
+        {
+          "id": "eyebrow",
+          "label": "章節標記",
+          "semantic": "eyebrow",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "eyebrow",
+          "defaultEffects": []
+        },
+        {
+          "id": "title",
+          "label": "主標題",
+          "semantic": "title",
+          "type": "text",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "title",
+          "defaultEffects": []
+        },
+        {
+          "id": "body",
+          "label": "內文",
+          "semantic": "body",
+          "type": "text",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "body",
+          "defaultEffects": []
+        },
+        {
+          "id": "hero",
+          "label": "主視覺",
+          "semantic": "hero",
+          "type": "image",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "image",
+          "defaultEffects": []
+        },
+        {
+          "id": "caption",
+          "label": "圖片說明",
+          "semantic": "caption",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "caption",
+          "defaultEffects": []
+        },
+        {
+          "id": "quote",
+          "label": "引言",
+          "semantic": "quote",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "quote",
+          "defaultEffects": []
+        },
+        {
+          "id": "secondary",
+          "label": "第二張圖片",
+          "semantic": "secondary",
+          "type": "image",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "image",
+          "defaultEffects": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "editorial",
+          "label": "Editorial / 編輯敘事",
+          "regions": [
+            {
+              "id": "narrative",
+              "frame": {
+                "x": 0.055,
+                "y": 0.12,
+                "width": 0.38,
+                "height": 0.75
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "left",
+              "gutterSafe": true,
+              "slots": [
+                "eyebrow",
+                "title",
+                "body",
+                "quote"
+              ],
+              "weights": {
+                "eyebrow": 0.4,
+                "title": 3,
+                "body": 2,
+                "quote": 1.3
+              }
+            },
+            {
+              "id": "visual",
+              "frame": {
+                "x": 0.55,
+                "y": 0.05,
+                "width": 0.4,
+                "height": 0.8
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "right",
+              "gutterSafe": true,
+              "slots": [
+                "hero",
+                "secondary"
+              ],
+              "weights": {
+                "hero": 4,
+                "secondary": 2
+              }
+            },
+            {
+              "id": "caption",
+              "frame": {
+                "x": 0.55,
+                "y": 0.88,
+                "width": 0.4,
+                "height": 0.055
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "right",
+              "gutterSafe": true,
+              "slots": [
+                "caption"
+              ],
+              "weights": {
+                "caption": 0.5
+              }
+            }
+          ]
+        },
+        {
+          "id": "reverse",
+          "label": "Image first / 影像優先",
+          "regions": [
+            {
+              "id": "visual",
+              "frame": {
+                "x": 0.055,
+                "y": 0.08,
+                "width": 0.41,
+                "height": 0.78
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "left",
+              "gutterSafe": true,
+              "slots": [
+                "hero",
+                "secondary"
+              ],
+              "weights": {
+                "hero": 4,
+                "secondary": 2
+              }
+            },
+            {
+              "id": "narrative",
+              "frame": {
+                "x": 0.55,
+                "y": 0.16,
+                "width": 0.38,
+                "height": 0.65
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "right",
+              "gutterSafe": true,
+              "slots": [
+                "eyebrow",
+                "title",
+                "body",
+                "quote"
+              ],
+              "weights": {
+                "eyebrow": 0.4,
+                "title": 3,
+                "body": 2,
+                "quote": 1.3
+              }
+            },
+            {
+              "id": "caption",
+              "frame": {
+                "x": 0.055,
+                "y": 0.88,
+                "width": 0.4,
+                "height": 0.055
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "left",
+              "gutterSafe": true,
+              "slots": [
+                "caption"
+              ],
+              "weights": {
+                "caption": 0.5
+              }
+            }
+          ]
+        }
+      ],
+      "gutter": {
+        "width": 0,
+        "textSafety": 60,
+        "imageSafety": 40,
+        "allowImageCrossing": false
+      }
+    },
+    {
+      "id": "information",
+      "label": "使用步驟",
+      "intent": "information",
+      "kind": "single",
+      "description": "使用步驟：以內容目的選擇版型；保留文字與圖片再切換構圖。",
+      "slots": [
+        {
+          "id": "eyebrow",
+          "label": "章節標記",
+          "semantic": "eyebrow",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "eyebrow",
+          "defaultEffects": []
+        },
+        {
+          "id": "title",
+          "label": "主標題",
+          "semantic": "title",
+          "type": "text",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "title",
+          "defaultEffects": []
+        },
+        {
+          "id": "body",
+          "label": "內文",
+          "semantic": "body",
+          "type": "text",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "body",
+          "defaultEffects": []
+        },
+        {
+          "id": "hero",
+          "label": "主視覺",
+          "semantic": "hero",
+          "type": "image",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "image",
+          "defaultEffects": []
+        },
+        {
+          "id": "caption",
+          "label": "圖片說明",
+          "semantic": "caption",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "caption",
+          "defaultEffects": []
+        },
+        {
+          "id": "quote",
+          "label": "引言",
+          "semantic": "quote",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "quote",
+          "defaultEffects": []
+        },
+        {
+          "id": "secondary",
+          "label": "第二張圖片",
+          "semantic": "secondary",
+          "type": "image",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "image",
+          "defaultEffects": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "editorial",
+          "label": "Editorial / 編輯敘事",
+          "regions": [
+            {
+              "id": "heading",
+              "frame": {
+                "x": 0.065,
+                "y": 0.1,
+                "width": 0.53,
+                "height": 0.32
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "eyebrow",
+                "title"
+              ],
+              "weights": {
+                "eyebrow": 0.4,
+                "title": 3
+              }
+            },
+            {
+              "id": "copy",
+              "frame": {
+                "x": 0.065,
+                "y": 0.49,
+                "width": 0.53,
+                "height": 0.4
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "body",
+                "quote",
+                "caption"
+              ],
+              "weights": {
+                "body": 2,
+                "quote": 1.3,
+                "caption": 0.5
+              }
+            },
+            {
+              "id": "visual",
+              "frame": {
+                "x": 0.65,
+                "y": 0.16,
+                "width": 0.29,
+                "height": 0.72
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "hero",
+                "secondary"
+              ],
+              "weights": {
+                "hero": 4,
+                "secondary": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "reverse",
+          "label": "Image first / 影像優先",
+          "regions": [
+            {
+              "id": "visual",
+              "frame": {
+                "x": 0.055,
+                "y": 0.08,
+                "width": 0.41,
+                "height": 0.78
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "hero",
+                "secondary"
+              ],
+              "weights": {
+                "hero": 4,
+                "secondary": 2
+              }
+            },
+            {
+              "id": "narrative",
+              "frame": {
+                "x": 0.55,
+                "y": 0.16,
+                "width": 0.38,
+                "height": 0.65
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "eyebrow",
+                "title",
+                "body",
+                "quote"
+              ],
+              "weights": {
+                "eyebrow": 0.4,
+                "title": 3,
+                "body": 2,
+                "quote": 1.3
+              }
+            },
+            {
+              "id": "caption",
+              "frame": {
+                "x": 0.055,
+                "y": 0.88,
+                "width": 0.4,
+                "height": 0.055
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "caption"
+              ],
+              "weights": {
+                "caption": 0.5
+              }
+            }
+          ]
+        }
+      ],
+      "gutter": {
+        "width": 0,
+        "textSafety": 60,
+        "imageSafety": 40,
+        "allowImageCrossing": false
+      }
+    },
+    {
+      "id": "team",
+      "label": "品牌人物",
+      "intent": "team",
+      "kind": "spread",
+      "description": "每位成員各有獨立照片、姓名與職稱；可分別換圖、裁切與編輯，不需要預先拼合照片。",
+      "slots": [
+        {
+          "id": "eyebrow",
+          "label": "章節標記",
+          "semantic": "eyebrow",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "eyebrow",
+          "defaultEffects": []
+        },
+        {
+          "id": "title",
+          "label": "主標題",
+          "semantic": "title",
+          "type": "text",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "title",
+          "defaultEffects": []
+        },
+        {
+          "id": "body",
+          "label": "內文",
+          "semantic": "body",
+          "type": "text",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "body",
+          "defaultEffects": []
+        },
+        {
+          "id": "hero",
+          "label": "人物 1 照片",
+          "semantic": "person-1-portrait",
+          "type": "image",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "image",
+          "defaultEffects": []
+        },
+        {
+          "id": "caption",
+          "label": "圖片說明",
+          "semantic": "caption",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "caption",
+          "defaultEffects": []
+        },
+        {
+          "id": "quote",
+          "label": "引言",
+          "semantic": "quote",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "quote",
+          "defaultEffects": []
+        },
+        {
+          "id": "secondary",
+          "label": "人物 2 照片",
+          "semantic": "person-2-portrait",
+          "type": "image",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "image",
+          "defaultEffects": []
+        },
+        {
+          "id": "name1",
+          "label": "人物 1 姓名",
+          "semantic": "name1",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "body",
+          "defaultEffects": []
+        },
+        {
+          "id": "role1",
+          "label": "人物 1 職稱",
+          "semantic": "role1",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "caption",
+          "defaultEffects": []
+        },
+        {
+          "id": "name2",
+          "label": "人物 2 姓名",
+          "semantic": "name2",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "body",
+          "defaultEffects": []
+        },
+        {
+          "id": "role2",
+          "label": "人物 2 職稱",
+          "semantic": "role2",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "caption",
+          "defaultEffects": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "editorial",
+          "label": "Editorial / 編輯敘事",
+          "regions": [
+            {
+              "id": "narrative",
+              "frame": {
+                "x": 0.055,
+                "y": 0.16,
+                "width": 0.38,
+                "height": 0.65
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "left",
+              "gutterSafe": true,
+              "slots": [
+                "eyebrow",
+                "title",
+                "body",
+                "quote"
+              ],
+              "weights": {
+                "eyebrow": 0.4,
+                "title": 3,
+                "body": 2,
+                "quote": 1.3
+              }
+            },
+            {
+              "id": "person-1",
+              "frame": {
+                "x": 0.54,
+                "y": 0.13,
+                "width": 0.185,
+                "height": 0.71
+              },
+              "flow": "stack",
+              "gap": 18,
+              "scope": "right",
+              "gutterSafe": true,
+              "slots": [
+                "hero",
+                "name1",
+                "role1"
+              ],
+              "weights": {
+                "hero": 6,
+                "name1": 0.6,
+                "role1": 0.5
+              }
+            },
+            {
+              "id": "person-2",
+              "frame": {
+                "x": 0.76,
+                "y": 0.13,
+                "width": 0.185,
+                "height": 0.71
+              },
+              "flow": "stack",
+              "gap": 18,
+              "scope": "right",
+              "gutterSafe": true,
+              "slots": [
+                "secondary",
+                "name2",
+                "role2"
+              ],
+              "weights": {
+                "secondary": 6,
+                "name2": 0.6,
+                "role2": 0.5
+              }
+            },
+            {
+              "id": "caption",
+              "frame": {
+                "x": 0.54,
+                "y": 0.88,
+                "width": 0.405,
+                "height": 0.055
+              },
+              "flow": "stack",
+              "gap": 18,
+              "scope": "right",
+              "gutterSafe": true,
+              "slots": [
+                "caption"
+              ],
+              "weights": {
+                "caption": 0.5
+              }
+            }
+          ]
+        },
+        {
+          "id": "reverse",
+          "label": "Image first / 影像優先",
+          "regions": [
+            {
+              "id": "narrative",
+              "frame": {
+                "x": 0.55,
+                "y": 0.16,
+                "width": 0.38,
+                "height": 0.65
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "right",
+              "gutterSafe": true,
+              "slots": [
+                "eyebrow",
+                "title",
+                "body",
+                "quote"
+              ],
+              "weights": {
+                "eyebrow": 0.4,
+                "title": 3,
+                "body": 2,
+                "quote": 1.3
+              }
+            },
+            {
+              "id": "person-1",
+              "frame": {
+                "x": 0.055,
+                "y": 0.13,
+                "width": 0.185,
+                "height": 0.71
+              },
+              "flow": "stack",
+              "gap": 18,
+              "scope": "left",
+              "gutterSafe": true,
+              "slots": [
+                "hero",
+                "name1",
+                "role1"
+              ],
+              "weights": {
+                "hero": 6,
+                "name1": 0.6,
+                "role1": 0.5
+              }
+            },
+            {
+              "id": "person-2",
+              "frame": {
+                "x": 0.275,
+                "y": 0.13,
+                "width": 0.185,
+                "height": 0.71
+              },
+              "flow": "stack",
+              "gap": 18,
+              "scope": "left",
+              "gutterSafe": true,
+              "slots": [
+                "secondary",
+                "name2",
+                "role2"
+              ],
+              "weights": {
+                "secondary": 6,
+                "name2": 0.6,
+                "role2": 0.5
+              }
+            },
+            {
+              "id": "caption",
+              "frame": {
+                "x": 0.055,
+                "y": 0.88,
+                "width": 0.405,
+                "height": 0.055
+              },
+              "flow": "stack",
+              "gap": 18,
+              "scope": "left",
+              "gutterSafe": true,
+              "slots": [
+                "caption"
+              ],
+              "weights": {
+                "caption": 0.5
+              }
+            }
+          ]
+        }
+      ],
+      "gutter": {
+        "width": 0,
+        "textSafety": 60,
+        "imageSafety": 40,
+        "allowImageCrossing": false
+      }
+    },
+    {
+      "id": "gallery",
+      "label": "影像故事",
+      "intent": "gallery",
+      "kind": "spread",
+      "description": "影像故事：以內容目的選擇版型；保留文字與圖片再切換構圖。",
+      "slots": [
+        {
+          "id": "eyebrow",
+          "label": "章節標記",
+          "semantic": "eyebrow",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "eyebrow",
+          "defaultEffects": []
+        },
+        {
+          "id": "title",
+          "label": "主標題",
+          "semantic": "title",
+          "type": "text",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "title",
+          "defaultEffects": []
+        },
+        {
+          "id": "body",
+          "label": "內文",
+          "semantic": "body",
+          "type": "text",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "body",
+          "defaultEffects": []
+        },
+        {
+          "id": "hero",
+          "label": "主視覺",
+          "semantic": "hero",
+          "type": "image",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "image",
+          "defaultEffects": []
+        },
+        {
+          "id": "caption",
+          "label": "圖片說明",
+          "semantic": "caption",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "caption",
+          "defaultEffects": []
+        },
+        {
+          "id": "quote",
+          "label": "引言",
+          "semantic": "quote",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "quote",
+          "defaultEffects": []
+        },
+        {
+          "id": "secondary",
+          "label": "第二張圖片",
+          "semantic": "secondary",
+          "type": "image",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "image",
+          "defaultEffects": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "editorial",
+          "label": "Editorial / 編輯敘事",
+          "regions": [
+            {
+              "id": "visual",
+              "frame": {
+                "x": 0.06,
+                "y": 0.08,
+                "width": 0.88,
+                "height": 0.52
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "spread",
+              "gutterSafe": false,
+              "slots": [
+                "hero",
+                "secondary"
+              ],
+              "weights": {
+                "hero": 4,
+                "secondary": 2
+              }
+            },
+            {
+              "id": "narrative",
+              "frame": {
+                "x": 0.06,
+                "y": 0.66,
+                "width": 0.39,
+                "height": 0.28
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "left",
+              "gutterSafe": true,
+              "slots": [
+                "eyebrow",
+                "title"
+              ],
+              "weights": {
+                "eyebrow": 0.4,
+                "title": 3
+              }
+            },
+            {
+              "id": "copy",
+              "frame": {
+                "x": 0.55,
+                "y": 0.66,
+                "width": 0.39,
+                "height": 0.28
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "right",
+              "gutterSafe": true,
+              "slots": [
+                "body",
+                "quote",
+                "caption"
+              ],
+              "weights": {
+                "body": 2,
+                "quote": 1.3,
+                "caption": 0.5
+              }
+            }
+          ]
+        },
+        {
+          "id": "reverse",
+          "label": "Image first / 影像優先",
+          "regions": [
+            {
+              "id": "visual",
+              "frame": {
+                "x": 0.055,
+                "y": 0.08,
+                "width": 0.41,
+                "height": 0.78
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "left",
+              "gutterSafe": true,
+              "slots": [
+                "hero",
+                "secondary"
+              ],
+              "weights": {
+                "hero": 4,
+                "secondary": 2
+              }
+            },
+            {
+              "id": "narrative",
+              "frame": {
+                "x": 0.55,
+                "y": 0.16,
+                "width": 0.38,
+                "height": 0.65
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "right",
+              "gutterSafe": true,
+              "slots": [
+                "eyebrow",
+                "title",
+                "body",
+                "quote"
+              ],
+              "weights": {
+                "eyebrow": 0.4,
+                "title": 3,
+                "body": 2,
+                "quote": 1.3
+              }
+            },
+            {
+              "id": "caption",
+              "frame": {
+                "x": 0.055,
+                "y": 0.88,
+                "width": 0.4,
+                "height": 0.055
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "left",
+              "gutterSafe": true,
+              "slots": [
+                "caption"
+              ],
+              "weights": {
+                "caption": 0.5
+              }
+            }
+          ]
+        }
+      ],
+      "gutter": {
+        "width": 0,
+        "textSafety": 60,
+        "imageSafety": 40,
+        "allowImageCrossing": true
+      }
+    },
+    {
+      "id": "closing",
+      "label": "結語與邀請",
+      "intent": "closing",
+      "kind": "single",
+      "description": "結語與邀請：以內容目的選擇版型；保留文字與圖片再切換構圖。",
+      "slots": [
+        {
+          "id": "eyebrow",
+          "label": "章節標記",
+          "semantic": "eyebrow",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "eyebrow",
+          "defaultEffects": []
+        },
+        {
+          "id": "title",
+          "label": "主標題",
+          "semantic": "title",
+          "type": "text",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "title",
+          "defaultEffects": []
+        },
+        {
+          "id": "body",
+          "label": "內文",
+          "semantic": "body",
+          "type": "text",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "body",
+          "defaultEffects": []
+        },
+        {
+          "id": "hero",
+          "label": "主視覺",
+          "semantic": "hero",
+          "type": "image",
+          "required": true,
+          "addable": false,
+          "removable": false,
+          "style": "image",
+          "defaultEffects": []
+        },
+        {
+          "id": "caption",
+          "label": "圖片說明",
+          "semantic": "caption",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "caption",
+          "defaultEffects": []
+        },
+        {
+          "id": "quote",
+          "label": "引言",
+          "semantic": "quote",
+          "type": "text",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "quote",
+          "defaultEffects": []
+        },
+        {
+          "id": "secondary",
+          "label": "第二張圖片",
+          "semantic": "secondary",
+          "type": "image",
+          "required": false,
+          "addable": true,
+          "removable": true,
+          "style": "image",
+          "defaultEffects": []
+        }
+      ],
+      "variants": [
+        {
+          "id": "editorial",
+          "label": "Editorial / 編輯敘事",
+          "regions": [
+            {
+              "id": "narrative",
+              "frame": {
+                "x": 0.08,
+                "y": 0.17,
+                "width": 0.48,
+                "height": 0.66
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "eyebrow",
+                "title",
+                "body",
+                "quote"
+              ],
+              "weights": {
+                "eyebrow": 0.4,
+                "title": 3,
+                "body": 2,
+                "quote": 1.3
+              }
+            },
+            {
+              "id": "visual",
+              "frame": {
+                "x": 0.66,
+                "y": 0.26,
+                "width": 0.26,
+                "height": 0.48
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "hero",
+                "secondary"
+              ],
+              "weights": {
+                "hero": 4,
+                "secondary": 2
+              }
+            },
+            {
+              "id": "caption",
+              "frame": {
+                "x": 0.08,
+                "y": 0.89,
+                "width": 0.5,
+                "height": 0.055
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "caption"
+              ],
+              "weights": {
+                "caption": 0.5
+              }
+            }
+          ]
+        },
+        {
+          "id": "reverse",
+          "label": "Image first / 影像優先",
+          "regions": [
+            {
+              "id": "visual",
+              "frame": {
+                "x": 0.055,
+                "y": 0.08,
+                "width": 0.41,
+                "height": 0.78
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "hero",
+                "secondary"
+              ],
+              "weights": {
+                "hero": 4,
+                "secondary": 2
+              }
+            },
+            {
+              "id": "narrative",
+              "frame": {
+                "x": 0.55,
+                "y": 0.16,
+                "width": 0.38,
+                "height": 0.65
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "eyebrow",
+                "title",
+                "body",
+                "quote"
+              ],
+              "weights": {
+                "eyebrow": 0.4,
+                "title": 3,
+                "body": 2,
+                "quote": 1.3
+              }
+            },
+            {
+              "id": "caption",
+              "frame": {
+                "x": 0.055,
+                "y": 0.88,
+                "width": 0.4,
+                "height": 0.055
+              },
+              "flow": "stack",
+              "gap": 26,
+              "scope": "page",
+              "gutterSafe": true,
+              "slots": [
+                "caption"
+              ],
+              "weights": {
+                "caption": 0.5
+              }
+            }
+          ]
+        }
+      ],
+      "gutter": {
+        "width": 0,
+        "textSafety": 60,
+        "imageSafety": 40,
+        "allowImageCrossing": false
+      }
+    }
+  ]
+}

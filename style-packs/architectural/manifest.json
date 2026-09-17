@@ -1,0 +1,19 @@
+{
+  "id": "architectural",
+  "name": "Architectural Editorial",
+  "version": "0.1.0",
+  "schemaVersion": "0.1",
+  "status": "planned",
+  "description": "Reserved M1 manifest. Layout recipes and sample deck to follow.",
+  "supportedIntents": [
+    "cover",
+    "intro",
+    "story",
+    "product",
+    "information",
+    "team",
+    "gallery",
+    "closing"
+  ],
+  "sampleDocument": null
+}

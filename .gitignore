@@ -1,0 +1,17 @@
+node_modules/
+dist/
+*.tsbuildinfo
+test-results/
+playwright-report/
+
+user-jobs/
+.env
+dist-static/
+
+# Local packages, private configuration and test captures
+.env.*
+!.env.example
+.DS_Store
+*.log
+easypage-static-demo.zip
+docs/screenshots/

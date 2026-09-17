@@ -1,0 +1,583 @@
+{
+  "schemaVersion": "0.1",
+  "id": "modern-corporate-sample",
+  "title": "Aster Works — Annual Review",
+  "stylePackId": "modern-corporate",
+  "stylePackVersion": "0.1.0",
+  "page": {
+    "width": 840,
+    "height": 1188,
+    "binding": "digital"
+  },
+  "units": [
+    {
+      "id": "unit-01",
+      "label": "年度報告封面",
+      "kind": "single",
+      "intent": "cover",
+      "layoutId": "cover",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "Aster Works / Annual Review 2025",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "Progress, with purpose.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "A year of focused delivery, stronger partnerships and practical progress. This fictional report explores how a growing team turns shared ambition into measurable outcomes.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "ILLUSTRATIVE SAMPLE / Replace with your own work.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "study-1",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-02",
+      "label": "執行摘要",
+      "kind": "single",
+      "intent": "intro",
+      "layoutId": "intro",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "01 / Executive summary",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "A clearer path forward.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "We simplified our service portfolio, improved delivery handovers and invested in the people closest to our customers. Our next chapter builds on consistent execution.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "ILLUSTRATIVE SAMPLE / Replace with your own work.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "study-2",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-03",
+      "label": "公司策略",
+      "kind": "single",
+      "intent": "story",
+      "layoutId": "story",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "02 / Strategy",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "Three priorities. One direction.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "Build reliable services. Develop lasting customer relationships. Give every team the tools to do its best work. These priorities guide our decisions and our investment.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "ILLUSTRATIVE SAMPLE / Replace with your own work.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "study-3",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-04",
+      "label": "服務介紹",
+      "kind": "single",
+      "intent": "product",
+      "layoutId": "product",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "03 / Services",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "From insight to impact.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "Our advisory, design and delivery teams work together from the first question to the final handover. Each engagement begins with a clear brief and a shared measure of success.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "ILLUSTRATIVE SAMPLE / Replace with your own work.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "study-1",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-05",
+      "label": "績效與數據",
+      "kind": "single",
+      "intent": "information",
+      "layoutId": "information",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "04 / Performance",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "A year in numbers.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "Sample figures: 24 projects delivered, 12 partner organisations and 92% client satisfaction. These illustrative metrics demonstrate the report layout and are not real business results.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "ILLUSTRATIVE SAMPLE / Replace with your own work.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "study-2",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-06",
+      "label": "專案案例",
+      "kind": "single",
+      "intent": "feature",
+      "layoutId": "feature",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "05 / Case study",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "Better systems. Better work.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "For a fictional regional service team, we redesigned intake and clarified ownership. The pilot replaced fragmented requests with one shared view of priorities and progress.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "ILLUSTRATIVE SAMPLE / Replace with your own work.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "study-3",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-07",
+      "label": "團隊與文化",
+      "kind": "single",
+      "intent": "team",
+      "layoutId": "team",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "06 / Our team",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "People make the difference.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "Our multidisciplinary team pairs analytical thinking with hands-on delivery. Weekly reviews and mentoring sessions turn individual experience into shared capability.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "ILLUSTRATIVE SAMPLE / Replace with your own work.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "portrait-1",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        },
+        "secondary": {
+          "type": "image",
+          "assetId": "portrait-2",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-08",
+      "label": "永續承諾",
+      "kind": "single",
+      "intent": "gallery",
+      "layoutId": "gallery",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "07 / Sustainability",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "Responsible by design.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "We are mapping the footprint of our operations and improving the quality of our data. Our focus is transparent reporting, considered procurement and steady, verifiable improvement.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "ILLUSTRATIVE SAMPLE / Replace with your own work.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "study-2",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        },
+        "secondary": {
+          "type": "image",
+          "assetId": "study-3",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-09",
+      "label": "未來展望",
+      "kind": "single",
+      "intent": "closing",
+      "layoutId": "closing",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "08 / Outlook",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "Ready for what comes next.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "In the coming year, we will deepen our partnerships, sharpen our delivery standards and keep listening. Let us build the next chapter together.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "ILLUSTRATIVE SAMPLE / Replace with your own work.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "study-3",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    }
+  ],
+  "assets": {
+    "study-1": {
+      "id": "study-1",
+      "label": "Corporate study 1",
+      "alt": "Illustrative business performance chart",
+      "src": "/assets/corporate-study-1.svg",
+      "width": 1200,
+      "height": 800,
+      "kind": "placeholder",
+      "credit": "EasyPage original vector sample; fictional demonstration",
+      "artDirection": "Replace with a real project image or report graphic."
+    },
+    "study-2": {
+      "id": "study-2",
+      "label": "Corporate study 2",
+      "alt": "Illustrative business performance chart",
+      "src": "/assets/corporate-study-2.svg",
+      "width": 1200,
+      "height": 800,
+      "kind": "placeholder",
+      "credit": "EasyPage original vector sample; fictional demonstration",
+      "artDirection": "Replace with a real project image or report graphic."
+    },
+    "study-3": {
+      "id": "study-3",
+      "label": "Corporate study 3",
+      "alt": "Illustrative business performance chart",
+      "src": "/assets/corporate-study-3.svg",
+      "width": 1200,
+      "height": 800,
+      "kind": "placeholder",
+      "credit": "EasyPage original vector sample; fictional demonstration",
+      "artDirection": "Replace with a real project image or report graphic."
+    },
+    "portrait-1": {
+      "id": "portrait-1",
+      "label": "Team member 1",
+      "alt": "Individual portrait placeholder 1",
+      "src": "/assets/portrait-1.svg",
+      "width": 800,
+      "height": 1000,
+      "kind": "placeholder",
+      "credit": "EasyPage original vector placeholder",
+      "artDirection": "Replace with one individual portrait."
+    },
+    "portrait-2": {
+      "id": "portrait-2",
+      "label": "Team member 2",
+      "alt": "Individual portrait placeholder 2",
+      "src": "/assets/portrait-2.svg",
+      "width": 800,
+      "height": 1000,
+      "kind": "placeholder",
+      "credit": "EasyPage original vector placeholder",
+      "artDirection": "Replace with one individual portrait."
+    }
+  }
+}

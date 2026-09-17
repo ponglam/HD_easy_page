@@ -1,0 +1,62 @@
+{
+  "$ref": "#/definitions/manifest",
+  "definitions": {
+    "manifest": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string",
+          "const": "0.1.0"
+        },
+        "schemaVersion": {
+          "type": "string",
+          "const": "0.1"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "ready",
+            "planned"
+          ]
+        },
+        "catalog": {
+          "type": "boolean",
+          "default": true
+        },
+        "description": {
+          "type": "string"
+        },
+        "supportedIntents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sampleDocument": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "version",
+        "schemaVersion",
+        "status",
+        "description",
+        "supportedIntents",
+        "sampleDocument"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

@@ -1,0 +1,603 @@
+{
+  "schemaVersion": "0.1",
+  "id": "nara-sample",
+  "title": "NARA — A quieter kind of beauty",
+  "stylePackId": "soft-editorial",
+  "stylePackVersion": "0.1.0",
+  "page": {
+    "width": 1600,
+    "height": 900,
+    "binding": "digital"
+  },
+  "units": [
+    {
+      "id": "unit-01",
+      "label": "品牌氛圍開場",
+      "kind": "single",
+      "intent": "cover",
+      "layoutId": "cover",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "NARA SKIN  /  THE RITUAL COLLECTION",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "Rituals for\nnatural radiance.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "A quieter approach to everyday skincare. Botanical ingredients, considered textures, and a little space to begin again.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "A daily ritual, thoughtfully composed.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "serum",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-02",
+      "label": "核心理念",
+      "kind": "spread",
+      "intent": "intro",
+      "layoutId": "intro",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "01  /  OUR PHILOSOPHY",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "Less noise.\nMore intention.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "We believe a daily routine can be an invitation to slow down. NARA brings a thoughtful edit of textures and botanical ingredients to the moments you already make for yourself.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "Make room for the small things.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "botanical",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-03",
+      "label": "品牌故事",
+      "kind": "spread",
+      "intent": "story",
+      "layoutId": "story",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "02  /  OUR STORY",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "Rooted in\nthe everyday.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "NARA began with one question: what would skincare look like if it asked less of us? Our fictional studio explores fewer steps, familiar ingredients, and packaging designed to live quietly on your shelf.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "From an idea to a daily companion.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "serum",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-04",
+      "label": "主打產品",
+      "kind": "single",
+      "intent": "product",
+      "layoutId": "product",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "03  /  THE COLLECTION",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "The Daily\nBotanical Serum",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "A lightweight serum concept with a soft, comforting finish. A few drops become the centre of a simple morning ritual. Follow with your everyday moisturiser.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "DAILY BOTANICAL SERUM  /  30 mL",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "serum",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-05",
+      "label": "成分亮點",
+      "kind": "spread",
+      "intent": "feature",
+      "layoutId": "feature",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "04  /  INGREDIENT STORIES",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "Nature, with\na considered touch.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "Oat-inspired softness. A green botanical note. A texture that feels quietly luxurious. Each ingredient story in this concept collection begins with how a ritual feels, not how complicated it can become.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "Botanical study No. 01 — leaf, light, texture.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "botanical",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-06",
+      "label": "使用步驟",
+      "kind": "single",
+      "intent": "information",
+      "layoutId": "information",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "05  /  YOUR DAILY RITUAL",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "A moment,\nin three steps.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "01  CLEANSE — Begin with a gentle wash.\n02  PAUSE — Press a few drops into your palms.\n03  FINISH — Follow with moisturiser and take a breath.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "Illustrative routine for this fictional sample brand.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "serum",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-07",
+      "label": "品牌人物",
+      "kind": "spread",
+      "intent": "team",
+      "layoutId": "team",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "06  /  THE PEOPLE",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "A shared eye\nfor the essentials.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "A shared appreciation for thoughtful details brings our fictional studio together. From creative direction to product design, each person contributes a different way of seeing the everyday.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "Two perspectives, one considered collection.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "portrait-1",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        },
+        "secondary": {
+          "type": "image",
+          "assetId": "portrait-2",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        },
+        "name1": {
+          "type": "text",
+          "text": "Mina Chen",
+          "effects": []
+        },
+        "role1": {
+          "type": "text",
+          "text": "Creative direction",
+          "effects": []
+        },
+        "name2": {
+          "type": "text",
+          "text": "Alex Lin",
+          "effects": []
+        },
+        "role2": {
+          "type": "text",
+          "text": "Product design",
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-08",
+      "label": "影像故事",
+      "kind": "spread",
+      "intent": "gallery",
+      "layoutId": "gallery",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "07  /  IN GOOD COMPANY",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "A slower\nkind of morning.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "Sunlight on stone. A branch against the wall. A familiar bottle within reach. The collection finds its place among ordinary things, and makes a little more room for them.",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "An editorial study in light and everyday objects.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "serum",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        },
+        "secondary": {
+          "type": "image",
+          "assetId": "botanical",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    },
+    {
+      "id": "unit-09",
+      "label": "結語與邀請",
+      "kind": "single",
+      "intent": "closing",
+      "layoutId": "closing",
+      "variantId": "editorial",
+      "slots": {
+        "eyebrow": {
+          "type": "text",
+          "text": "NARA SKIN  /  BEGIN AGAIN",
+          "effects": []
+        },
+        "title": {
+          "type": "text",
+          "text": "Make space\nfor your ritual.",
+          "effects": []
+        },
+        "body": {
+          "type": "text",
+          "text": "Explore the NARA collection and find a rhythm that feels like you.\n\nDiscover the collection → nara.example",
+          "effects": []
+        },
+        "caption": {
+          "type": "text",
+          "text": "A fictional brand. A real space for your story.",
+          "effects": []
+        },
+        "hero": {
+          "type": "image",
+          "assetId": "serum",
+          "operations": {
+            "fit": "cover",
+            "focal": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "crop": {
+              "x": 0,
+              "y": 0,
+              "width": 1,
+              "height": 1
+            },
+            "backgroundRemove": {
+              "mode": "none",
+              "status": "idle"
+            }
+          },
+          "effects": []
+        }
+      }
+    }
+  ],
+  "assets": {
+    "serum": {
+      "id": "serum",
+      "label": "NARA / Daily Botanical Serum",
+      "alt": "Ivory NARA bottle on limestone with a sage branch",
+      "src": "/assets/nara-serum.png",
+      "width": 1254,
+      "height": 1254,
+      "kind": "generated",
+      "credit": "AI-generated concept image",
+      "artDirection": "Soft daylight; warm ivory, stone and muted sage. Quiet editorial composition."
+    },
+    "botanical": {
+      "id": "botanical",
+      "label": "Botanical study / placeholder",
+      "alt": "Muted sage botanical illustration placeholder",
+      "src": "/assets/botanical.svg",
+      "width": 900,
+      "height": 1100,
+      "kind": "placeholder",
+      "credit": "Original vector placeholder; replace with licensed photography",
+      "artDirection": "Soft daylight; warm ivory, stone and muted sage. Quiet editorial composition."
+    },
+    "portrait": {
+      "id": "portrait",
+      "label": "NARA studio / placeholder",
+      "alt": "Team portrait placement guide with two abstract figures",
+      "src": "/assets/portrait.svg",
+      "width": 1200,
+      "height": 900,
+      "kind": "placeholder",
+      "credit": "Original vector placeholder; replace with licensed photography",
+      "artDirection": "Soft daylight; warm ivory, stone and muted sage. Quiet editorial composition."
+    },
+    "portrait-1": {
+      "id": "portrait-1",
+      "label": "Mina / portrait placeholder",
+      "alt": "Single portrait placeholder for Mina",
+      "src": "/assets/portrait-1.svg",
+      "width": 600,
+      "height": 800,
+      "kind": "placeholder",
+      "credit": "Original vector placeholder; replace with individual portrait",
+      "artDirection": "Individual head and shoulders portrait, soft daylight, quiet neutral background."
+    },
+    "portrait-2": {
+      "id": "portrait-2",
+      "label": "Alex / portrait placeholder",
+      "alt": "Single portrait placeholder for Alex",
+      "src": "/assets/portrait-2.svg",
+      "width": 600,
+      "height": 800,
+      "kind": "placeholder",
+      "credit": "Original vector placeholder; replace with individual portrait",
+      "artDirection": "Individual head and shoulders portrait, soft daylight, quiet neutral background."
+    }
+  }
+}
