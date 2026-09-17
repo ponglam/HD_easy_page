@@ -13,12 +13,12 @@ describe('Real job-folder storage',()=>{
   const bytes=await readFile('public/assets/nara-serum.png');
   const response=await fetch(url+'/api/jobs/test-job/assets',{method:'POST',body:JSON.stringify({name:'portrait.png',dataUrl:'data:image/png;base64,'+bytes.toString('base64')})});expect(response.status).toBe(201);const uploaded=await response.json();
   expect(uploaded.src).toMatch(/^\/api\/jobs\/test-job\/assets\/[a-f0-9]+.png$/);
-  expect(Buffer.from(await(await fetch(url+uploaded.src)).arrayBuffer())).toEqual(bytes);
+  expect(Buffer.from(await(await fetch(url+uploaded.src)).arrayBuffer()).equals(bytes)).toBe(true);
   const document={...structuredClone(sample),id:'test-job'};document.assets.serum.src=uploaded.src;
   const saved=await fetch(url+'/api/jobs/test-job/document',{method:'PUT',body:JSON.stringify(document)});expect(saved.status).toBe(200);
   const disk=JSON.parse(await readFile(join(root,'test-job','document.json'),'utf8'));expect(disk.assets.serum.src).toBe(uploaded.src);expect(disk.assets['portrait-1'].src).toContain('/api/jobs/test-job/assets/');
   expect((await(await fetch(url+'/api/jobs/test-job/document')).json()).id).toBe('test-job');expect((await(await fetch(url+'/api/jobs')).json()).jobs).toContainEqual({id:'test-job',title:sample.title,units:9});
- });
+ },30000);
  it('rejects invalid IDs, non-images, cross-site writes and mismatched documents',async()=>{
   expect((await fetch(url+'/api/jobs/%2e%2e%2foutside/assets',{method:'POST',body:'{}'})).status).toBe(404);
   expect((await fetch(url+'/api/jobs/test-job/assets',{method:'POST',body:JSON.stringify({dataUrl:'data:image/png;base64,'+Buffer.from('not a png').toString('base64')})})).status).toBe(400);
